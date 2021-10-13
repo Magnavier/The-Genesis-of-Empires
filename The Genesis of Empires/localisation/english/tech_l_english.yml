@@ -1,0 +1,60 @@
+﻿l_english:
+#Description of space-time manipulation
+tech_space_time_eng:0 "Space-Time Manipulation"
+  tech_space_time_eng_desc:0 "The previously established theories of Space-Time, are to be put to test extensively. This will benefit our understanding of the Universe and how it ticks greatly and allow us to seek future applications and possibly result in the realisation of Science-Fiction dream: Dimensional Engineering."
+
+#Huon related tech descriptions
+tech_huon_contain:0 "Huon Containement"
+  tech_huon_contain_desc:0 "Based on our current understanding of Physics we might be able to design a safe container for Huon particles, for further use and study."
+tech_huon_gen:0 "Huon Particles Generation"
+  tech_huon_gen_desc:0 "Now that we have designed appropriate containement vessels for the particles we can concentrate on finding means to generate them in sufficient quantities."
+tech_huon_gen_t2:0 "Huon harvesting"
+tech_huon_gen_t2_desc:0 "We may be able to compact our Huon production a little allowing us to produce more, within a single building, however scientists fear that it may not be possible to lower the cost of production."
+
+#Description of the dark matter generation techs
+tech_dark_matter_enrich:0 "Dark Matter enrichement"
+  tech_dark_matter_enrich_desc:0 "We are in need of more dark matter than ever, and the black holes are inconsistent and unsufficient to fill our needs. Our scientists therefor suggest we research a way of producing dark matter on our own."
+
+tech_dark_matter_gen_t2:0 "Dark matter purification"
+tech_dark_matter_gen_t2_desc:0 "Scientists think that it may be possible to further upgrade our dark matter enrichment method, eliminating the need for exotic gases as catalyst."
+
+tech_dark_matter_gen_t3:0 "Advanced dark matter purification"
+  tech_dark_matter_gen_t3_desc:0 "It might be possible to reduce the need for energy in the purification, allowing us to shift towards a more industrial use of dark matter."
+
+#Description of Dimensional engineering
+tech_dimensional_engineering:0 "Dimensional Engineering"
+  tech_dimensional_engineering_desc:0 "Finally, after much work we might be able to bend dimensions to our will. This will be revolutionary in every aspect of Science and allow us to achieve things we could only dream of 5 years ago....It's bigger on the inside?"
+
+#Tech descriptions related to the Hyper custodian loop
+
+tech_theo_micro_wormhole:0 "Theoretical micro-wormhole generation"
+tech_theo_micro_wormhole_desc:0 "Some of our scientists think with our current understanding of dimensions and engineering way may be able to create micro wormholes allowing us to move instatanioulsy across the whole galaxy. This would yield revolutionary advances for trade, science and military. It may be time to prove them right... or wrong. Either way it will help us in the future."
+
+#Nanites techs description that lead to Tryon Project
+
+tech_nanite_rep:0 "Nanite replication"
+tech_nanite_rep_desc:0 "We have observed nanites and their behaving for a while now and we may still learn a lot from them. Their replication patterns could be exploited in the fields of alloy production and may even be expoited to build or fill huge structures."
+
+tech_hive_intelligence:0 "Nanite hive-mind"
+tech_hive_intelligence_desc:0 "Until this point we have only been able to programm the nanites to complete basic tasks, like following a scheme. But if we manage to create a web intelligence for each nanite colony, the will be able to attack complex problems, become sapient as a collective and be independent and use all of this potential to assist us."
+
+tech_seed_p1:0 "The Seeding Project I"
+tech_seed_p1_desc:0 "It may be possible to use the hive intelligence of nanites and their exponential growth to achieve what none has before. Imagine a sphere continually growing, built of octillions of nanites devoted to solving our problems. Unlimited scientific potential in our hands...We may start looking into a programm to animate them and give them sapience in the needed way."
+
+#Eye of Harmony
+tech_eye_harmony:0 "The Eye of Harmony"
+tech_eye_harmony_desc:0 "This is strucutre will be the apex of our knowledge and symbol of power. Once it has been built we will never agin be in the shadows of our predessesors, freezing a colapsing star in time, no one has ever achieved this before, but we will. And with it's power in our hand, the universe is ours to conquer. The weak will be terrified of us and the strong will bow, all will bow in front of the Eye of Harmony."
+
+#Tryon Project securing
+tech_grand_scale_warping:0 "Grand scale warping"
+tech_grand_scale_warping_desc:0 "The Tryon project has always been a risk, its infinite potential has a price, whcih we may be bound to pay if we do not secure it. One rogue nanite would be all it takes. But this far we are safe and according to the calculation of the Tryon project, we might never have to face insecurity. It might be possible to seal the project off and send it in a paralell pocket universe. There it could never harm us and we would still profit from it. But we still have a long way to go. First, we must investigate how to warp structures the size of suns"
+
+tech_pocket_universe:0 "Pocket universe"
+tech_pocket_universe_desc:0 "Finally, after much research we think to have found the right solution. With a little bit more time and trials we might be able to create a pocket universe to store the project in. And then we will be safe, and the mysteries of the universe ours to conquer."
+
+#Hyperlane Detonator
+tech_hyperlane_detonator:0 "Hyperlane detonator"
+tech_hyperlane_detonator_desc:0 "This last piece of the final peace protocol, will ensure our definite safety, as it will destroy the Hyperlanes and cut us of from the rest of the galaxy. The struggle outside our space will no longer concern us in any way, and no longer will we have to endure the whims of jaleous neighbours and the inefficiency of galactic politics."
+#Dematerialization Circuit
+tech_demat_circuit:0 "Dematerialization Circuit"
+tech_demat_circuit_desc:0 "Coupled with the warp power of the HCL, the dematerialization cirtcuit can make a ship jump anywhere in the galaxy in an instant, even avoiding penalties... Trans-galactic teleportation anyone?"

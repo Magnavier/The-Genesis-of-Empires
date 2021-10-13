@@ -1,0 +1,232 @@
+@phase_0_entity_x = -15
+@phase_0_entity_y = -5
+#Hyper Custodian Loop
+#Stage 1 (construction platform)
+HCL_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 300
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+	prerequisites = { "tech_HCL" }
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_HCL"
+			from = { NOT = { has_country_flag = built_HCL } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+	}
+	placement_rules = {
+			planet_possible = {
+				custom_tooltip = {
+					fail_text = "must_build_around_star"
+					is_star = yes
+				}
+				custom_tooltip = {
+					fail_text = "requires_no_anomaly"
+					NOT = { has_anomaly = yes }
+				}
+			}
+	}
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+	}
+	on_build_complete = {
+		set_star_flag = HCL_built
+		from = { set_country_flag = built_HCL }
+		fromfrom.planet = {
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+}
+
+#HCL Stage 2 Primary Warp Ring
+HCL_1 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 2700
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 10000
+			sr_dark_matter = 1000
+		}
+		upkeep = {
+			energy = 25
+		}
+		produces = {
+			physics_research = 100
+		}
+	}
+	upgrade_from = {
+		HCL_0
+	}
+	prerequisites = {
+		"tech_HCL"
+	}
+	country_modifier = {
+		country_physics_tech_research_speed = 0.05
+	}
+}
+
+#HCL Stage 2
+HCL_2 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 2700
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 12500
+			sr_dark_matter = 1200
+		}
+		upkeep = {
+			energy = 40
+		}
+		produces = {
+			physics_research = 125
+		}
+	}
+	upgrade_from = {
+		HCL_1
+	}
+	prerequisites = {
+		"tech_HCL"
+	}
+	country_modifier = {
+		country_physics_tech_research_speed = 0.05
+		shipclass_military_evasion_add = 10
+	}
+}
+
+#HCL Stage 3 Tetiary Ring: Accuracy booster
+HCL_3 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 2700
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 12500
+			sr_dark_matter = 1200
+		}
+		upkeep = {
+			energy = 45
+		}
+		produces = {
+			physics_research = 150
+		}
+	}
+	upgrade_from = {
+		HCL_2
+	}
+	prerequisites = {
+		"tech_HCL"
+	}
+	country_modifier = {
+		country_physics_tech_research_speed = 0.05
+		ship_evasion_add = 15
+		ship_emergency_ftl_mult = -0.25
+	}
+}
+#HCL Stage 4 Activation
+HCL_4 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 2700
+	resources = {
+		category = megastructures
+		cost = {
+			energy = 15000
+			sr_dark_matter = 2000
+		}
+		upkeep = {
+			energy = 80
+		}
+		produces = {
+			physics_research = 200
+		}
+	}
+	upgrade_from = {
+		HCL_3
+	}
+	prerequisites = {
+		"tech_HCL"
+	}
+	country_modifier = {
+		country_physics_tech_research_speed = 0.1
+		ship_evasion_add = 20
+		ship_emergency_ftl_mult = -0.5
+		ship_emergency_ftl_min_days_mult = -0.5
+	}
+	on_build_complete = {
+		from = { set_country_flag = built_HCL_fully }
+	}
+}

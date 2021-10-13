@@ -1,0 +1,288 @@
+#dm gen jobs
+dark_matter_generator = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = 
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		specialist_job_check_trigger = yes
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_dark_matter_generator
+		produces = {
+			sr_dark_matter = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t2
+				}
+			}
+			sr_dark_matter = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t3
+				}
+			}
+			sr_dark_matter = 2
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen
+				}
+			}
+			exotic_gases = 4
+			energy = 20
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t2
+				}
+			}
+			energy = 30
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t3
+				}
+			}
+			energy = 15
+		}
+
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+
+dark_matter_generator_drone = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = 
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		specialist_job_check_trigger = yes
+		owner = {
+			is_gestalt = yes
+		}
+	}
+
+	resources = {
+		category = planet_dark_matter_generator
+		produces = {
+			sr_dark_matter = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t2
+				}
+			}
+			sr_dark_matter = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t3
+				}
+			}
+			sr_dark_matter = 2
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen
+				}
+			}
+			exotic_gases = 4
+			energy = 20
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t2
+				}
+			}
+			energy = 30
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_dark_matter_gen_t3
+				}
+			}
+			energy = 15
+		}
+		
+
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+#huon gen jobs
+huon_particles_generator = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = 
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		specialist_job_check_trigger = yes
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_huon_paticles_generator
+		produces = {
+			huon_particles = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t2
+				}
+			}
+			huon_particles = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t3
+				}
+			}
+			huon_particles = 2
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen
+				}
+			}
+			sr_dark_matter = 6
+			energy = 30
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t2
+				}
+			}
+			sr_dark_matter = 9
+			energy = 40
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t3
+				}
+			}
+			sr_dark_matter = 12
+			energy = 25
+		}
+
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+huon_particles_drone_generator = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	#building_icon = 
+	
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	possible = {
+		specialist_job_check_trigger = yes
+		owner = {
+			is_gestalt = yes
+		}
+	}
+
+	resources = {
+		category = planet_huon_paticles_generator
+		produces = {
+			huon_particles = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t2
+				}
+			}
+			huon_particles = 1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t3
+				}
+			}
+			huon_particles = 2
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen
+				}
+			}
+			sr_dark_matter = 6
+			energy = 30
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t2
+				}
+			}
+			sr_dark_matter = 9
+			energy = 40
+		}
+		upkeep = {
+			trigger = {
+				planet = {
+					has_active_building = building_huon_particles_gen_t3
+				}
+			}
+			sr_dark_matter = 12
+			energy = 25
+		}
+
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
