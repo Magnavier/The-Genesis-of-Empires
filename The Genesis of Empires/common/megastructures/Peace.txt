@@ -1,0 +1,269 @@
+#Peace Megastrucutre
+peace_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 300
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+	prerequisites = { "tech_final_peace_protocol" }
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_Peace"
+			from = { NOT = { has_country_flag = built_Peace } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			has_no_non_gate_megastructure = yes
+		}
+	}
+	placement_rules = {
+			planet_possible = {
+				custom_tooltip = {
+					fail_text = "must_build_around_star"
+					is_star = yes
+				}
+				custom_tooltip = {
+					fail_text = "requires_no_anomaly"
+					NOT = { has_anomaly = yes }
+				}
+			}
+	}
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	on_build_complete = {
+		set_star_flag = Peace_built
+		from = { set_country_flag = built_Peace }
+		fromfrom.planet = {
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+}
+peace_1 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 40
+		}
+	}
+	upgrade_from = {
+		peace_0
+	}
+	prerequisites = {
+		tech_hyperlane_detonator
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	country_modifier = {
+		ship_home_territory_fire_rate_mult = 0.10
+	}
+}
+peace_2 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+		}
+
+		upkeep = {
+			energy = 60
+		}
+	}
+	upgrade_from = {
+		peace_1
+	}
+	prerequisites = {
+		tech_hyper_coms_scrambler
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	country_modifier = {
+		ship_home_territory_fire_rate_mult = 0.10
+		ship_shield_mult = 0.1
+	}
+}
+peace_3 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 7200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 25000
+		}
+
+		upkeep = {
+			energy = 200
+		}
+	}
+	upgrade_from = {
+		peace_2
+	}
+	prerequisites = {
+		tech_final_peace
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	country_modifier = {
+		ship_home_territory_fire_rate_mult = 0.10
+		ship_shield_mult = 0.1
+		pop_happiness = 0.2
+	}
+}
+peace_4 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = @phase_0_entity_x y = @phase_0_entity_y }
+	build_time = 1
+	resources = {
+		category = megastructures
+		cost = {
+			energy = 30000
+		}
+
+		upkeep = {
+			energy = 200
+		}
+	}
+	upgrade_from = {
+		peace_3
+	}
+	prerequisites = {
+		tech_final_peace
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	country_modifier = {
+		ship_home_territory_fire_rate_mult = 0.10
+		ship_shield_mult = 0.1
+		pop_happiness = 0.2
+	}
+	on_build_complete = {
+		from = {
+			win = yes
+		}
+	}
+}

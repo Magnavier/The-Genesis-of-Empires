@@ -1,0 +1,68 @@
+#New Ascension Perks
+#Perk for most Megastructures
+ap_the_start_of_genesis = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "You first need to pick Galactic Wonders."
+			has_galactic_wonders = yes
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			add_research_option = tech_HCL
+			add_research_option = tech_eye_harmony
+			add_research_option = tech_code_tryon
+		}
+	}
+	modifier = {
+		country_megastructure_build_cap_add = 1
+		megastructure_build_speed_mult = 2
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+#Perk for Peace megastructure
+ap_pursuit_peace = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "You first need to pick Galactic Wonders."
+			has_galactic_wonders = yes
+		}
+		custom_tooltip = {
+			fail_text = "You need to be pacifist to pick this perk."
+			has_ethic = ethic_pacifist
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+	}
+	on_enabled = {
+		hidden_effect = {
+			add_research_option = tech_final_peace_protocol
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 6
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 9
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+	modifier = {
+		pop_happiness = 0.2
+		megastructure_build_speed_mult = 2
+	}
+}

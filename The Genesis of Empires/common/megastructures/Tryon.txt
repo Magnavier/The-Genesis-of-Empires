@@ -1,0 +1,292 @@
+#Tryon Project Code
+#Tryon Project Stage 0
+tryon_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 300
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	prerequisites = { "tech_code_tryon" }
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_tryon"
+			from = { NOT = { has_country_flag = built_tryon } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_black_hole"
+			is_star_class = sc_black_hole
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			has_no_non_gate_megastructure = yes
+		}
+	}
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			is_star_class = sc_black_hole
+		}
+	}
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_materialist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+	on_build_complete = {
+		set_star_flag = tryon_built
+		from = { set_country_flag = built_tryon }
+		fromfrom.planet = {
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+}
+#Tryon stage 1
+tryon_1 = {
+	entity = "dyson_sphere_phase_01_entity"
+	construction_entity = "dyson_sphere_frame_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 3600
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			nanites = 5000
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+	upgrade_from = {
+		tryon_0
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_2 = {
+	entity = "dyson_sphere_phase_02_entity"
+	construction_entity = "dyson_sphere_part_1_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 4500
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 150
+		}
+		produces = {
+			society_research = 250
+			physics_research = 250
+			engineering_research = 250
+		}
+	}
+	upgrade_from = {
+		tryon_1
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_3 = {
+	entity = "dyson_sphere_phase_03_entity"
+	construction_entity = "dyson_sphere_part_2_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 300
+		}
+		produces = {
+			society_research = 500
+			physics_research = 500
+			engineering_research = 500
+		}
+	}
+	upgrade_from = {
+		tryon_2
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_4 = {
+	entity = "dyson_sphere_phase_04_entity"
+	construction_entity = "dyson_sphere_part_3_entity"
+	portrait = "GFX_megastructure_construction_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 600
+		}
+		produces = {
+			society_research = 1000
+			physics_research = 1000
+			engineering_research = 1000
+		}
+	}
+	upgrade_from = {
+		tryon_3
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_5 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 1200
+		}
+		produces = {
+			society_research = 2000
+			physics_research = 2000
+			engineering_research = 2000
+		}
+	}
+	upgrade_from = {
+		tryon_4
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_6 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 2400
+		}
+		produces = {
+			society_research = 4000
+			physics_research = 4000
+			engineering_research = 4000
+		}
+	}
+	upgrade_from = {
+		tryon_5
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_7 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 4800
+		}
+		produces = {
+			society_research = 8000
+			physics_research = 8000
+			engineering_research = 8000
+		}
+	}
+	upgrade_from = {
+		tryon_6
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}
+tryon_8 = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	build_time = 1800
+	resources = {
+		category = megastructures
+		upkeep = {
+			energy = 9600
+		}
+		produces = {
+			society_research = 16000
+			physics_research = 16000
+			engineering_research = 16000
+		}
+	}
+	upgrade_from = {
+		tryon_7
+	}
+	prerequisites = {
+		tech_code_tryon
+	}
+}

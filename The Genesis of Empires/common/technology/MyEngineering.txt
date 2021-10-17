@@ -1,0 +1,139 @@
+#New engineering techs
+
+#living Metal cristalization: unlocks a building permitting the production od living metal
+tech_living_metal_cristal = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost2
+	category = {industry}
+	prerequisites = {
+		"tech_mine_living_metal"
+	}
+	weight = @tier5weight2
+}
+
+#Nanite foundries: unlocks building able to produce nanites
+tech_nanite_foundries = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost3
+	category = {industry}
+	prerequisites = {
+		"tech_living_metal_cristal""tech_nanite_rep"
+	}
+	weight = @tier5weight3
+}
+
+#Nanite hatchery: unlocks autonomous building producing nanites more efficiently
+tech_nanite_hatcheries = {
+	area = engineering
+	tier = 5
+	cost = 50000
+	category = {industry}
+	prerequisites = {
+		"tech_nanite_foundries""tech_hive_intelligence"
+	}
+	weight = @tier5weight3
+}
+
+#Hyper Custodian Loop: Unlocks HCL megastructure
+tech_HCL = {
+	area = engineering
+	tier = 5
+	cost = 64000
+	category = {voidcraft}
+	prerequisites = {
+		"tech_theo_micro_wormhole""tech_living_metal_cristal"
+	}
+	weight = 10
+	potential = {
+		has_ascension_perk = ap_the_start_of_genesis
+	}
+}
+
+#Seeding Project II : Next step to the Tryon project
+tech_seed_p2 = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost3
+	category = {materials}
+	prerequisites = {
+		"tech_seed_p1""tech_nanite_foundries"
+	}
+	weight = @tier5weight3
+	modifier = {
+		planet_researchers_engineering_research_produces_mult = 0.6
+		megastructure_build_speed_mult = 0.3
+	}
+}
+
+#Huon Thrusters: Tech unlocking the Huon thruster ship component
+tech_huon_thrusters = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost2
+	category = {propulsion}
+	prerequisites = {
+		"tech_thrusters_4""tech_huon_contain"
+	}
+	weight = @tier5weight2
+	is_reverse_engineerable = no
+}
+
+#Time locking engine: unlocks ship power component
+tech_time_lock_eng = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost3
+	category = {
+		voidcraft
+	}
+	prerequisites = {
+		"tech_huon_gen""tech_huon_contain"
+	}
+	weight = @tier5weight3
+	is_reverse_engineerable = no
+}
+
+#CODENAME: TRYON: Unlocks nanite megastructure (for research)
+tech_code_tryon = {
+	area = engineering
+	tier = 5
+	cost = 64000
+	is_rare = yes
+	category = {
+		voidcraft
+	}
+	prerequisites = {
+		"tech_seed_p3"
+	}
+	weight = 10
+	potential = {
+		has_ascension_perk = ap_the_start_of_genesis
+	}
+}
+
+#Hyperscale coms scrambler: 3rd part of peace protocol
+tech_hyper_coms_scrambler = {
+	area = engineering
+	tier = 5
+	cost = 68000
+	category = {
+		voidcraft
+	}
+	prerequisites = {
+		"tech_hyperlane_detonator"
+	}
+	weight = 12
+	ai_weight = {
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_pacifist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}

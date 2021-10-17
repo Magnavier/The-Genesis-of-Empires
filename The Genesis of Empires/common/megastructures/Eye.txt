@@ -1,0 +1,247 @@
+#Eye of Harmony Megastructure
+#Eye Stage 0 (Consturction platform)
+eye_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -20 y = -20 }
+	rotate_to_center = no
+	scale_offset = yes
+	build_time = 1800
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 10000
+			influence = 350
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	prerequisites = { "tech_eye_harmony" }
+	potential = {
+		has_ascension_perk = ap_the_start_of_genesis
+	}
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_Eye"
+			from = { NOT = { has_country_flag = built_Eye } }
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_binary_trinary"
+			NOR = {
+				is_star_class = sc_binary_1
+				is_star_class = sc_binary_2
+				is_star_class = sc_binary_3
+				is_star_class = sc_binary_4
+				is_star_class = sc_binary_5
+				is_star_class = sc_binary_6
+				is_star_class = sc_binary_7
+				is_star_class = sc_binary_8
+				is_star_class = sc_binary_9
+				is_star_class = sc_binary_10
+				is_star_class = sc_trinary_1
+				is_star_class = sc_trinary_2
+				is_star_class = sc_trinary_3
+				is_star_class = sc_trinary_4
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			has_no_non_gate_megastructure = yes
+		}
+	}
+	placement_rules = {
+			planet_possible = {
+				custom_tooltip = {
+					fail_text = "must_build_around_star"
+					is_star = yes
+				}
+				custom_tooltip = {
+					fail_text = "requires_no_anomaly"
+					NOT = { has_anomaly = yes }
+				}
+			}
+	}
+	ai_weight = {
+		factor = 15
+
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}
+
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = {
+					owner = { is_same_value = from }
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_militarist
+		}
+
+		modifier = {
+			factor = 2.0
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		from = { set_country_flag = built_Eye }
+		fromfrom.planet = {
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+		}
+	}
+}
+#Eye Stage 1 forcefield generator
+eye_1 = {
+	entity = "matter_decompressor_stage_1_entity"
+	construction_entity = "matter_decompressor_stage_1_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -20 y = -20 }
+	rotate_to_center = yes
+	scale_offset = yes
+	place_entity_on_planet_plane = no
+	build_time = 4500
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+			huon_particles = 500
+		}
+
+		produces = {
+			minerals = 300
+			energy =150
+		}
+	}
+	upgrade_from = {
+		eye_0
+	}
+	prerequisites = { "tech_eye_harmony" }
+}
+#Eye Stage 2
+eye_2 = {
+	entity = "matter_decompressor_stage_2_entity"
+	construction_entity = "matter_decompressor_stage_2_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -20 y = -20 }
+	rotate_to_center = yes
+	scale_offset = yes
+	place_entity_on_planet_plane = no
+	build_time = 4500
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+			huon_particles = 500
+		}
+
+		produces = {
+			minerals = 400
+			energy = 200
+		}
+	}
+	upgrade_from = {
+		eye_1
+	}
+	prerequisites = { "tech_eye_harmony" }
+}
+#Eye Stage 3
+eye_3 = {
+	entity = "matter_decompressor_stage_3_entity"
+	construction_entity = "matter_decompressor_stage_3_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	entity_offset = { x = -20 y = -20 }
+	rotate_to_center = yes
+	scale_offset = yes
+	place_entity_on_planet_plane = no
+	build_time = 4500
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 15000
+			huon_particles = 500
+		}
+
+		produces = {
+			minerals = 600
+			energy = 300
+		}
+	}
+	upgrade_from = {
+		eye_2
+	}
+	prerequisites = { "tech_eye_harmony" }
+	country_modifier = {
+		ship_base_speed_mult = 0.15
+	}
+}
+eye_4 = {
+	entity = "matter_decompressor_stage_4_entity"
+	construction_entity = "matter_decompressor_stage_4_construction_entity"
+	portrait = "GFX_megastructure_matter_decompressor_background"
+	entity_offset = { x = -20 y = -20 }
+	rotate_to_center = yes
+	scale_offset = yes
+	place_entity_on_planet_plane = no
+	build_time = 5000
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 20000
+			huon_particles = 1500
+		}
+
+		produces = {
+			minerals = 1200
+			energy = 600
+		}
+	}
+	upgrade_from = {
+		eye_3
+	}
+	prerequisites = { "tech_eye_harmony" }
+	country_modifier = {
+		ship_base_speed_mult = 0.25
+		diplo_weight_mult = 1
+	}
+}

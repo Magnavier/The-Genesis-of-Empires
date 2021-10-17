@@ -1,0 +1,11 @@
+huon_particles = {
+	tradable = no
+	max = 25000
+
+	prerequisites = {"tech_huon_contain"}
+	visibility_prerequisite = { always = yes }
+
+	ai_weight = {
+		weight = 100
+	}
+}
