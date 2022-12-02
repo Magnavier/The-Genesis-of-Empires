@@ -1,2 +1,2 @@
-# The-Genesis-of-Empires
-The files on this Github page contain the code of my Stellaris mod.
+# The-Genesis-of-Empires Doge Version
+The files on this Github page contain the code of Oliviers Stellaris mod.

@@ -10,7 +10,7 @@ tech_HCL_desc:0 "If gateways are a car, this is the ferrari of transportation. T
 tech_seed_p2:0 "Seeding project II"
 tech_seed_p2_desc:0 "The next step for the seeding Project would be to find adequate materials for the nanites. Common alloys will not resist to the pressure of duplication and provide enough flexibility."
 tech_huon_thrusters:0 "Huon Thrusters"
-tech_huon_thrusters_desc:0 "One application of Huon particles is to use them to power drives, which would increase the to speed of any ship greatlyy compared to the impulse thrusters."
+tech_huon_thrusters_desc:0 "One application of Huon Doge is to use them to power drives, which would increase the to speed of any ship greatlyy compared to the impulse thrusters."
 tech_time_lock_eng:0 "Time locked reactor"
 tech_time_lock_eng_desc:0 "Think of a reactor, containing a highly energetic nuclear fusion, one that under normal conditions would be unstable like a bomb. Now suspend the explosion in time, and harvest the constant ourflow of energy. Congrats, you have just imagined a time locked reactor. Basically, infinite energy at no cost, but warning breaches in the suspension apparatus may conduct to catastrophic failures."
 tech_code_tryon:0 "Codename: Tryon"

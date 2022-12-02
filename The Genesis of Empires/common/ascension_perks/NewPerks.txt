@@ -3,8 +3,8 @@
 ap_the_start_of_genesis = {
 	possible = {
 		custom_tooltip = {
-			fail_text = "You first need to pick Galactic Wonders."
-			has_galactic_wonders = yes
+			fail_text = "You first need to pick Galactic Doge."
+			has_galactic_Doge = yes
 		}
 	}
 	on_enabled = {
@@ -34,8 +34,8 @@ ap_the_start_of_genesis = {
 ap_pursuit_peace = {
 	possible = {
 		custom_tooltip = {
-			fail_text = "You first need to pick Galactic Wonders."
-			has_galactic_wonders = yes
+			fail_text = "You first need to pick Galactic Doge."
+			has_galactic_Doge = yes
 		}
 		custom_tooltip = {
 			fail_text = "You need to be pacifist to pick this perk."

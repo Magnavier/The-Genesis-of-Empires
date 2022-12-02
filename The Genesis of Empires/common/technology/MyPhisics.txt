@@ -5,7 +5,7 @@ tech_space_time_eng = {
 	cost = @tier4cost2
 	tier = 4
 	category = { field_manipulation }
-	prerequisites = { "tech_basic_science_lab_3" "tech_mine_dark_matter" }
+	prerequisites = { "tech_basic_science_lab_3" "tech_mine_Doge_matter" }
 	weight = @tier4weight1
 	modifier = {
 		planet_researchers_physics_research_produces_mult = 0.3
@@ -19,11 +19,11 @@ tech_huon_contain = {
 	area = physics
 	cost = @tier4cost3
 	tier = 4
-	category = { particles }
+	category = { Doge }
 	weight = @tier4weight3
 	modifier = {
 		planet_technician_energy_produces_mult = 0.5
-		planet_jobs_specialist_sr_dark_matter_produces_mult = 0.25
+		planet_jobs_specialist_sr_Doge_matter_produces_mult = 0.25
 	}
 	prerequisites = { "tech_space_time_eng" }
 }
@@ -34,35 +34,35 @@ tech_huon_gen = {
 	cost = @tier5cost1
 	tier = 5
 	is_rare = yes
-	category = { particles }
+	category = { Doge }
 	weight = @tier5weight2
 	prerequisites = { "tech_huon_contain" }
 }
-#dark matter generation
-#tech for all dark matter generations
-tech_dark_matter_enrich = {
+#Doge matter generation
+#tech for all Doge matter generations
+tech_Doge_matter_enrich = {
 	area = physics
 	cost = @tier4cost1
 	tier = 4
-	category = { particles }
+	category = { Doge }
 	weight = @tier4cost2
-	prerequisites = { "tech_mine_dark_matter" }
+	prerequisites = { "tech_mine_Doge_matter" }
 }
-tech_dark_matter_gen_t2 = {
+tech_Doge_matter_gen_t2 = {
 	area = physics
 	cost = @tier4cost3
 	tier = 4
-	category = { particles }
+	category = { Doge }
 	weight = @tier5cost1
-	prerequisites = { "tech_dark_matter_enrich" }
+	prerequisites = { "tech_Doge_matter_enrich" }
 }
-tech_dark_matter_gen_t3 = {
+tech_Doge_matter_gen_t3 = {
 	area = physics
 	cost = @tier5cost3
 	tier = 5
-	category = { particles }
+	category = { Doge }
 	weight = @tier5cost3
-	prerequisites = { "tech_dark_matter_gen_t2" }
+	prerequisites = { "tech_Doge_matter_gen_t2" }
 }
 #dimensional engineering
 #major bonuses and gateway to eye of harmony
@@ -86,7 +86,7 @@ tech_huon_gen_t2 = {
 	area = physics
 	cost = @tier5cost2
 	tier = 5
-	category = { particles }
+	category = { Doge }
 	weight = @tier5weight2
 	prerequisites = { "tech_huon_gen" }
 }
@@ -97,7 +97,7 @@ tech_theo_micro_wormhole = {
 	cost = @tier5cost2
 	tier = 5
 	category = {
-		particles
+		Doge
 	}
 	weight = @tier5weight3
 	prerequisites = {
@@ -246,7 +246,7 @@ tech_demat_circuit = {
 	area = physics
 	tier = 5
 	cost = @tier5cost2
-	category = {particles}
+	category = {Doge}
 	weight = @tier5weight2
 	prerequisites = {
 		"tech_huon_thrusters""tech_time_lock_eng""tech_jump_drive_1"

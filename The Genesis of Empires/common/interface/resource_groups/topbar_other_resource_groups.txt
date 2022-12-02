@@ -5,9 +5,9 @@ tb_others_group = {
 		rare_crystals
 		sr_living_metal
 		sr_zro
-		sr_dark_matter
+		sr_Doge_matter
 		nanites
-        huon_particles
+        huon_Doge
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default

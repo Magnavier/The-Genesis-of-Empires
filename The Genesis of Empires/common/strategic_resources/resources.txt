@@ -1,4 +1,4 @@
-huon_particles = {
+huon_Doge = {
 	tradable = no
 	max = 25000
 
