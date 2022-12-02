@@ -1,4 +1,4 @@
-building_dark_matter_gen = {
+building_Doge_matter_gen = {
 	
 	base_buildtime = @b3_time
 
@@ -41,7 +41,7 @@ building_dark_matter_gen = {
 		}
 	}
 
-	prerequisites = { "tech_dark_matter_enrich" }
+	prerequisites = { "tech_Doge_matter_enrich" }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -52,7 +52,7 @@ building_dark_matter_gen = {
 		}
 
 		modifier = {
-			job_dark_matter_generator_add = 2
+			job_Doge_matter_generator_add = 2
 		}
 	}
 
@@ -62,20 +62,20 @@ building_dark_matter_gen = {
             owner = { is_gestalt = yes }
         }
         modifier = {
-            job_dark_matter_generator_drone_add = 2
+            job_Doge_matter_generator_drone_add = 2
         }
     }
 
 	upgrades = {
-		building_dark_matter_gen_t2
+		building_Doge_matter_gen_t2
 	}
 
 	ai_resource_production = {
 		trigger = { always = yes }
-		sr_dark_matter = 4
+		sr_Doge_matter = 4
 	}
 }
-building_dark_matter_gen_t2 = {
+building_Doge_matter_gen_t2 = {
 	
 	base_buildtime = @b3_time
 
@@ -103,7 +103,7 @@ building_dark_matter_gen_t2 = {
 		}
 	}
 
-	prerequisites = { "tech_dark_matter_gen_t2" }
+	prerequisites = { "tech_Doge_matter_gen_t2" }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -114,7 +114,7 @@ building_dark_matter_gen_t2 = {
 		}
 
 		modifier = {
-			job_dark_matter_generator_add = 4
+			job_Doge_matter_generator_add = 4
 		}
 	}
 
@@ -124,19 +124,19 @@ building_dark_matter_gen_t2 = {
             owner = { is_gestalt = yes }
         }
         modifier = {
-            job_dark_matter_generator_drone_add = 4
+            job_Doge_matter_generator_drone_add = 4
         }
     }
 
 	upgrades = {
-		building_dark_matter_gen_t3
+		building_Doge_matter_gen_t3
 	}
 	ai_resource_production = {
 		trigger = { always = yes }
-		sr_dark_matter = 12
+		sr_Doge_matter = 12
 	}
 }
-building_dark_matter_gen_t3 = {
+building_Doge_matter_gen_t3 = {
 	
 	base_buildtime = @b3_time
 
@@ -164,7 +164,7 @@ building_dark_matter_gen_t3 = {
 		}
 	}
 
-	prerequisites = { "tech_dark_matter_gen_t3" }
+	prerequisites = { "tech_Doge_matter_gen_t3" }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -175,7 +175,7 @@ building_dark_matter_gen_t3 = {
 		}
 
 		modifier = {
-			job_dark_matter_generator_add = 6
+			job_Doge_matter_generator_add = 6
 		}
 	}
 
@@ -185,18 +185,18 @@ building_dark_matter_gen_t3 = {
             owner = { is_gestalt = yes }
         }
         modifier = {
-            job_dark_matter_generator_drone_add = 6
+            job_Doge_matter_generator_drone_add = 6
         }
     }
 	ai_resource_production = {
 		trigger = { always = yes }
-		sr_dark_matter = 16
+		sr_Doge_matter = 16
 	}
 }
 
 #huon generators
 
-building_huon_particles_gen = {
+building_huon_Doge_gen = {
 	
 	base_buildtime = @b3_time
 
@@ -218,7 +218,7 @@ building_huon_particles_gen = {
 		category = planet_buildings
 		cost = {
 			minerals = 3000
-			sr_dark_matter = 250
+			sr_Doge_matter = 250
 		}
 		upkeep = {
 			energy = 40
@@ -236,7 +236,7 @@ building_huon_particles_gen = {
 		}
 
 		modifier = {
-			job_huon_particles_generator_add = 2
+			job_huon_Doge_generator_add = 2
 		}
 	}
 
@@ -246,22 +246,22 @@ building_huon_particles_gen = {
             owner = { is_gestalt = yes }
         }
         modifier = {
-            job_huon_particles_drone_generator_add = 2
+            job_huon_Doge_drone_generator_add = 2
         }
     }
 
 	upgrades = {
-		building_huon_particles_gen_t2
+		building_huon_Doge_gen_t2
 	}
 	#downgrade works but not the upgrade....
 
 	ai_resource_production = {
 		trigger = { always = yes }
-		huon_particles = 4
+		huon_Doge = 4
 	}
 }
 
-building_huon_particles_gen_t2 = {
+building_huon_Doge_gen_t2 = {
 	
 	base_buildtime = @b3_time
 
@@ -284,7 +284,7 @@ building_huon_particles_gen_t2 = {
 		category = planet_buildings
 		cost = {
 			minerals = 4000
-			sr_dark_matter = 400
+			sr_Doge_matter = 400
 		}
 		upkeep = {
 			energy = 60
@@ -304,7 +304,7 @@ building_huon_particles_gen_t2 = {
 		}
 
 		modifier = {
-			job_huon_particles_generator_add = 4
+			job_huon_Doge_generator_add = 4
 		}
 	}
 
@@ -314,13 +314,13 @@ building_huon_particles_gen_t2 = {
             owner = { is_gestalt = yes }
         }
         modifier = {
-            job_huon_particles_drone_generator_add = 4
+            job_huon_Doge_drone_generator_add = 4
         }
     }
 
 	ai_resource_production = {
 		trigger = { always = yes }
-		huon_particles = 8
+		huon_Doge = 8
 	}
 
 }

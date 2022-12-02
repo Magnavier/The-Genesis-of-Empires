@@ -145,7 +145,7 @@ eye_1 = {
 		category = megastructures
 		cost = {
 			alloys = 15000
-			huon_particles = 500
+			huon_Doge = 500
 		}
 
 		produces = {
@@ -172,7 +172,7 @@ eye_2 = {
 		category = megastructures
 		cost = {
 			alloys = 15000
-			huon_particles = 500
+			huon_Doge = 500
 		}
 
 		produces = {
@@ -199,7 +199,7 @@ eye_3 = {
 		category = megastructures
 		cost = {
 			alloys = 15000
-			huon_particles = 500
+			huon_Doge = 500
 		}
 
 		produces = {
@@ -228,7 +228,7 @@ eye_4 = {
 		category = megastructures
 		cost = {
 			alloys = 20000
-			huon_particles = 1500
+			huon_Doge = 1500
 		}
 
 		produces = {

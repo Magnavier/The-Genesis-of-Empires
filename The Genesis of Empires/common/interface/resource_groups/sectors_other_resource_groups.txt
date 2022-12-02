@@ -5,10 +5,10 @@ sectors_others_group = {
 		rare_crystals
 		sr_living_metal
 		sr_zro
-		sr_dark_matter
+		sr_Doge_matter
 		nanites
 		minor_artifacts
-		huon_particles
+		huon_Doge
 	}
 	localization = {
 		"RESOURCE_GROUP_BALANCE_ONLY" = default

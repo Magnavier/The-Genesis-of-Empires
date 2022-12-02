@@ -112,7 +112,7 @@ HCL_1 = {
 		category = megastructures
 		cost = {
 			alloys = 10000
-			sr_dark_matter = 1000
+			sr_Doge_matter = 1000
 		}
 		upkeep = {
 			energy = 25
@@ -144,7 +144,7 @@ HCL_2 = {
 		category = megastructures
 		cost = {
 			alloys = 12500
-			sr_dark_matter = 1200
+			sr_Doge_matter = 1200
 		}
 		upkeep = {
 			energy = 40
@@ -177,7 +177,7 @@ HCL_3 = {
 		category = megastructures
 		cost = {
 			alloys = 12500
-			sr_dark_matter = 1200
+			sr_Doge_matter = 1200
 		}
 		upkeep = {
 			energy = 45
@@ -210,7 +210,7 @@ HCL_4 = {
 		category = megastructures
 		cost = {
 			energy = 15000
-			sr_dark_matter = 2000
+			sr_Doge_matter = 2000
 		}
 		upkeep = {
 			energy = 80

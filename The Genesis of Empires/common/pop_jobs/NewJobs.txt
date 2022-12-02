@@ -1,5 +1,5 @@
 #dm gen jobs
-dark_matter_generator = {
+Doge_matter_generator = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	#building_icon = 
@@ -17,30 +17,30 @@ dark_matter_generator = {
 	}
 
 	resources = {
-		category = planet_dark_matter_generator
+		category = planet_Doge_matter_generator
 		produces = {
-			sr_dark_matter = 2
+			sr_Doge_matter = 2
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t2
+					has_active_building = building_Doge_matter_gen_t2
 				}
 			}
-			sr_dark_matter = 1
+			sr_Doge_matter = 1
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t3
+					has_active_building = building_Doge_matter_gen_t3
 				}
 			}
-			sr_dark_matter = 2
+			sr_Doge_matter = 2
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen
+					has_active_building = building_Doge_matter_gen
 				}
 			}
 			exotic_gases = 4
@@ -49,7 +49,7 @@ dark_matter_generator = {
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t2
+					has_active_building = building_Doge_matter_gen_t2
 				}
 			}
 			energy = 30
@@ -57,7 +57,7 @@ dark_matter_generator = {
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t3
+					has_active_building = building_Doge_matter_gen_t3
 				}
 			}
 			energy = 15
@@ -70,7 +70,7 @@ dark_matter_generator = {
 	}
 }
 
-dark_matter_generator_drone = {
+Doge_matter_generator_drone = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	#building_icon = 
@@ -88,30 +88,30 @@ dark_matter_generator_drone = {
 	}
 
 	resources = {
-		category = planet_dark_matter_generator
+		category = planet_Doge_matter_generator
 		produces = {
-			sr_dark_matter = 2
+			sr_Doge_matter = 2
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t2
+					has_active_building = building_Doge_matter_gen_t2
 				}
 			}
-			sr_dark_matter = 1
+			sr_Doge_matter = 1
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t3
+					has_active_building = building_Doge_matter_gen_t3
 				}
 			}
-			sr_dark_matter = 2
+			sr_Doge_matter = 2
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen
+					has_active_building = building_Doge_matter_gen
 				}
 			}
 			exotic_gases = 4
@@ -120,7 +120,7 @@ dark_matter_generator_drone = {
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t2
+					has_active_building = building_Doge_matter_gen_t2
 				}
 			}
 			energy = 30
@@ -128,7 +128,7 @@ dark_matter_generator_drone = {
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_dark_matter_gen_t3
+					has_active_building = building_Doge_matter_gen_t3
 				}
 			}
 			energy = 15
@@ -142,7 +142,7 @@ dark_matter_generator_drone = {
 	}
 }
 #huon gen jobs
-huon_particles_generator = {
+huon_Doge_generator = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	#building_icon = 
@@ -162,49 +162,49 @@ huon_particles_generator = {
 	resources = {
 		category = planet_huon_paticles_generator
 		produces = {
-			huon_particles = 2
+			huon_Doge = 2
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t2
+					has_active_building = building_huon_Doge_gen_t2
 				}
 			}
-			huon_particles = 1
+			huon_Doge = 1
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t3
+					has_active_building = building_huon_Doge_gen_t3
 				}
 			}
-			huon_particles = 2
+			huon_Doge = 2
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen
+					has_active_building = building_huon_Doge_gen
 				}
 			}
-			sr_dark_matter = 6
+			sr_Doge_matter = 6
 			energy = 30
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t2
+					has_active_building = building_huon_Doge_gen_t2
 				}
 			}
-			sr_dark_matter = 9
+			sr_Doge_matter = 9
 			energy = 40
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t3
+					has_active_building = building_huon_Doge_gen_t3
 				}
 			}
-			sr_dark_matter = 12
+			sr_Doge_matter = 12
 			energy = 25
 		}
 
@@ -214,7 +214,7 @@ huon_particles_generator = {
 		weight = @specialist_job_weight
 	}
 }
-huon_particles_drone_generator = {
+huon_Doge_drone_generator = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	#building_icon = 
@@ -234,49 +234,49 @@ huon_particles_drone_generator = {
 	resources = {
 		category = planet_huon_paticles_generator
 		produces = {
-			huon_particles = 2
+			huon_Doge = 2
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t2
+					has_active_building = building_huon_Doge_gen_t2
 				}
 			}
-			huon_particles = 1
+			huon_Doge = 1
 		}
 		produces = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t3
+					has_active_building = building_huon_Doge_gen_t3
 				}
 			}
-			huon_particles = 2
+			huon_Doge = 2
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen
+					has_active_building = building_huon_Doge_gen
 				}
 			}
-			sr_dark_matter = 6
+			sr_Doge_matter = 6
 			energy = 30
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t2
+					has_active_building = building_huon_Doge_gen_t2
 				}
 			}
-			sr_dark_matter = 9
+			sr_Doge_matter = 9
 			energy = 40
 		}
 		upkeep = {
 			trigger = {
 				planet = {
-					has_active_building = building_huon_particles_gen_t3
+					has_active_building = building_huon_Doge_gen_t3
 				}
 			}
-			sr_dark_matter = 12
+			sr_Doge_matter = 12
 			energy = 25
 		}
 

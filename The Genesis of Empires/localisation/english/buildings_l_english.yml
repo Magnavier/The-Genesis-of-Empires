@@ -1,7 +1,7 @@
 ﻿l_english:
-building_dark_matter_gen:0 "Dark matter enrichment center"
-  building_dark_matter_gen_desc:0 "This building converts energy and exotic gases into dark matter, through a complicated procedure. It finally allows us independancy from blackholes for the harvesting of dark matter."
-building_dark_matter_gen_t2:0 "Dark matter purification chamber"
-  building_dark_matter_gen_t2_desc:0 "This upgraded version of the enrichement center has been equipped with the latest technology. Allowing it to produce dark matter from energy only."
-building_dark_matter_gen_t3:0 "Dark matter purification complex"
-  building_dark_matter_gen_t3_desc:0 "This final upgrade, allows us to produce industrial amounts of dark matter. Finally, we are independent from the whims of black holes."
+building_Doge_matter_gen:0 "Doge matter enrichment center"
+  building_Doge_matter_gen_desc:0 "This building converts energy and exotic gases into Doge matter, through a complicated procedure. It finally allows us independancy from blackholes for the harvesting of Doge matter."
+building_Doge_matter_gen_t2:0 "Doge matter purification chamber"
+  building_Doge_matter_gen_t2_desc:0 "This upgraded version of the enrichement center has been equipped with the latest technology. Allowing it to produce Doge matter from energy only."
+building_Doge_matter_gen_t3:0 "Doge matter purification complex"
+  building_Doge_matter_gen_t3_desc:0 "This final upgrade, allows us to produce industrial amounts of Doge matter. Finally, we are independent from the whims of black holes."
